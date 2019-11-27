@@ -1,0 +1,6 @@
+alias lt='ls -ltr'
+alias ll='ls -l'
+alias v='vim -p'
+alias vi='vim -p'
+alias cu='kermit -c'
+alias jpost='bundle exec jekyll post'
