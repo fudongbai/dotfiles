@@ -1,0 +1,16 @@
+"Quik close and save
+map <leader>q :q<cr>
+map <leader>a :qa<cr>
+map <leader>x :x<cr>
+map <leader>w :w<cr>
+
+map <leader>tn :tabnew 
+map <leader>te :tabedit 
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove 
+map <leader>to :tabonly<cr>
+map <leader>tf :tabfirst<cr>
+
+set whichwrap=
+set scrolloff=0
+set scrolljump=0
