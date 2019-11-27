@@ -18,3 +18,36 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+[alias]
+	st = status -s
+	co = checkout
+	ci = commit -v
+	cm = commit -m
+	ca = commit --amend
+	dc = diff --cached
+	ds = diff --stat
+	alias = config --get-regexp alias
+	br = branch
+	contains = branch --contains
+	unstage = reset HEAD --
+	ac = !git add . && git commit -as
+	amend = !git add -u && git commit --amend --no-edit
+	this = !git init && git add . && git commit -m \"initial commit\"
+	pc = !git push origin $(git rev-parse --abbrev-ref HEAD)
+	last = log -1 HEAD
+	hist = log --graph --pretty=format:%h
+	lsd = log --pretty=format:\"%C(yellow)%h %C(green)%ad %C(dim cyan)%cn%C(red)%d %Creset%s\" --decorate --date=short
+	ls = log --pretty=oneline --decorate --graph --abbrev-commit --all
+	ll = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --numstat
+	ld = log --pretty=format:\"%C(yellow)%h %C(green)%ad %C(dim cyan)%cn%C(red)%d %Creset%s\" --decorate --date=short --graph
+	today = log --pretty=format:\"%C(yellow)%h %C(green)%ad %C(dim cyan)%cn %C(red)%d %Creset%s\" --date=local --since=midnight
+	lrg = log --pretty=format:\"%C(yellow)%h %C(green)%>(12,trunc)%ad %C(dim cyan)%cn %C(red)%d %Creset%s\" --decorate --date=relative --graph
+	lsg = log --pretty=format:\"%C(yellow)%h %C(green)%ad %C(dim cyan)%cn%C(red)%d %Creset%s\" --decorate --date=short --graph
+	day = log --pretty=format:\"%h %cd %s (%an)\" --all --since=\"$1 days ago\"
+	mine = log --pretty=format:\"%C(yellow)%h %C(green)%ad %C(red)%d %Creset%s\" --decorate --date=short --author=Fudong
+	cleanup = !git clean -fd && git checkout -- .
+	ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
+	lrd = log --pretty=format:\"%C(yellow)%h %C(green)%>(12,trunc)%ad %C(dim cyan)%cn %C(red)%d %Creset%s\" --decorate --date=relative
+[oh-my-zsh]
+	hide-status = 1
+	hide-dirty = 1
